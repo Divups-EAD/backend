@@ -25,7 +25,8 @@ public class UserServiceImpl implements UserServices {
                            usr.getUsername(),
                            usr.getFirstname(),
                            usr.getLastname(),
-                           usr.getEmail(),usr.getPassword(), usr.getUsername(),usr.getUser_createdat())).collect(Collectors.toList());
+                           usr.getUser_role(),
+                           usr.getEmail(),usr.getPassword(),usr.getUser_createdat())).collect(Collectors.toList());
         return users;
     }
 

@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/user")
+@CrossOrigin(origins = "http://localhost:3000/")
 public class UserController {
 
     private final UserServices userServices;
@@ -27,7 +28,7 @@ public class UserController {
         User user = null;
         try {
             user = userServices.getUserById(id);
-            return ResponseEntity.status(HttpStatus.FOUND).body(user);
+            return ResponseEntity.status(HttpStatus.OK).body(user);
         } catch (Exception x){
            String sErrorMsg = "Error getting employee; "+x.getMessage();
             return sErrorMsg; // <<-- errant line here was causing the problem
