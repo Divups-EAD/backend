@@ -16,7 +16,7 @@ import static javax.persistence.FetchType.LAZY;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class BusOwner {
+public class BusOwnerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer bus_owner_id;
@@ -25,5 +25,5 @@ public class BusOwner {
     private Integer contact_no;
     @OneToOne(fetch = LAZY)
     @JoinColumn(name = "owner_details",referencedColumnName = "user_id")
-    private User user;
+    private UserEntity user;
 }

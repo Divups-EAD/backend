@@ -1,6 +1,5 @@
 package com.divups.ead.Model;
 
-import com.divups.ead.Entity.BusOwner;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

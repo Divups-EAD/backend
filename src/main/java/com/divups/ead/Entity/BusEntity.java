@@ -14,12 +14,12 @@ import static javax.persistence.FetchType.LAZY;
 
 @Data
 @Entity
-@Table(name = "buses")
+@Table(name="buses")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Bus {
+public class BusEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer bus_id;
@@ -34,5 +34,5 @@ public class Bus {
     private Instant added_on;
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name="bus_owner_id",referencedColumnName ="bus_owner_id")
-    private BusOwner busOwner;
+    private BusOwnerEntity busOwner;
 }
