@@ -29,12 +29,12 @@ public class SpecialHireEntity {
     private String destination;
     private Integer no_of_days;
     @NotEmpty
-    private Integer customer_contact;
+    private String customer_contact;
     private Date hire_date;
     private Boolean request_status;
     private String special_notes;
-    private Instant request_on;
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name="specialbus_id",referencedColumnName ="special_hiring_id")
-    private SpecialBusEntity specialBus;
+    private Date request_on;
+//    @ManyToOne(fetch = LAZY)
+//    @JoinColumn(name="specialbus_id",referencedColumnName ="special_hiring_id")
+//    private SpecialBusEntity specialBus;
 }

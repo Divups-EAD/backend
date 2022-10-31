@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
+import java.sql.Date;
 import java.time.Instant;
 
 import static javax.persistence.FetchType.LAZY;
@@ -31,8 +32,8 @@ public class BusEntity {
     private Boolean status;
     private Integer no_of_seats;
     private Double rate;
-    private Instant added_on;
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name="bus_owner_id",referencedColumnName ="bus_owner_id")
-    private BusOwnerEntity busOwner;
+    private Date added_on;
+//    @ManyToOne(fetch = LAZY)
+//    @JoinColumn(name="bus_owner_id",referencedColumnName ="bus_owner_id")
+//    private BusOwnerEntity busOwner;
 }

@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-import java.time.Instant;
-
-import static javax.persistence.FetchType.LAZY;
+import java.sql.Date;
 
 @Data
 @Entity
@@ -25,13 +23,13 @@ public class SpecialBusEntity {
     private Integer no_of_seats;
     private Double payment_rate;
     private String facillities;
-    private Integer contact_no;
+    private String contact_no;
     private String facebook_link;
     private String insta_link;
     private String bus_name;
     private String specialbus_type;
-    private Instant specialbus_added;
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name="busowner_id",referencedColumnName ="bus_owner_id")
-    private BusOwnerEntity busOwner;
+    private Date specialbus_added;
+//    @ManyToOne(fetch = LAZY)
+//    @JoinColumn(name="busowner_id",referencedColumnName ="bus_owner_id")
+//    private BusOwnerEntity busOwner;
 }

@@ -1,5 +1,6 @@
 package com.divups.ead.Entity;
 
+import com.divups.ead.Model.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,8 +23,8 @@ public class BusOwnerEntity {
     private Integer bus_owner_id;
     private String license_no;
     private String travelsname;
-    private Integer contact_no;
-    @OneToOne(fetch = LAZY)
-    @JoinColumn(name = "owner_details",referencedColumnName = "user_id")
-    private UserEntity user;
+    private String contact_no;
+//    @OneToOne(fetch = LAZY)
+//    @JoinColumn(name = "owner_details",referencedColumnName = "user_id")
+//    private UserEntity user;
 }

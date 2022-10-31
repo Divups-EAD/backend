@@ -3,7 +3,8 @@ package com.divups.ead.Model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.Instant;
+
+import java.sql.Date;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +18,6 @@ public class Bus {
     private Boolean status;
     private Integer no_of_seats;
     private Double rate;
-    private Instant added_on;
-    private BusOwner busOwner;
+    private Date added_on;
+//    private BusOwner busOwner;
 }

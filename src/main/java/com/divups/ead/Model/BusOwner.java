@@ -12,6 +12,6 @@ public class BusOwner {
     private Integer bus_owner_id;
     private String license_no;
     private String travelsname;
-    private Integer contact_no;
-    private User user;
+    private String contact_no;
+    //private User user;
 }
