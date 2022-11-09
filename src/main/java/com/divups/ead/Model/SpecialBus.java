@@ -13,13 +13,13 @@ import java.sql.Date;
 public class SpecialBus {
     private Integer special_hiring_id;
     private Integer no_of_seats;
-    private Double payment_rate;
+//    private Double payment_rate;
     private String facillities;
     private String contact_no;
     private String facebook_link;
     private String insta_link;
     private String bus_name;
     private String specialbus_type;
-    private Date specialbus_added;
+   // private Date specialbus_added;
 //    private BusOwnerEntity busOwner;
 }

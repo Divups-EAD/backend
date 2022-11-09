@@ -27,20 +27,11 @@ public class BookingEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idbooking;
     @NotEmpty
-    private Integer seat_no;
-    // ride date
-    @NotBlank(message = "Date for ride is required")
+    private String seat_no;
+    private Integer customer_id;
     private Date booking_date;
-    //ride time
-    @NotBlank(message = "Time for ride is required")
-    private Time booking_time;
-    private Boolean payment_status;
-    private Instant booking_at;
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name="busid",referencedColumnName ="bus_id")
-    private BusEntity bus;
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name="customer_id",referencedColumnName ="user_id")
-    private UserEntity user;
+    private Integer busid;
+
+
 
 }

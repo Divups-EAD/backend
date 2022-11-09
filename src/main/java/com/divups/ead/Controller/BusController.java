@@ -14,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/bus")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000/")
 
 public class BusController {
 
@@ -38,7 +38,7 @@ public class BusController {
 
         try {
             bus = busService.getBusById(id);
-            return ResponseEntity.status(HttpStatus.FOUND).body(bus);
+            return ResponseEntity.status(HttpStatus.OK).body(bus);
         } catch (Exception e){
             throw new BusOwnerNotFound("Bus not available");
         }
@@ -53,7 +53,7 @@ public class BusController {
     @PutMapping("/buses/{id}")
     public ResponseEntity EditBus(@PathVariable Integer id, @RequestBody Bus bus){
         bus = busService.EditBus(id,bus);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Bus Updated");
+        return ResponseEntity.status(HttpStatus.OK).body("Bus Updated");
     }
 
 

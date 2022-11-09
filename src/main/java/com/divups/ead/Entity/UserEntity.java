@@ -1,9 +1,12 @@
 package com.divups.ead.Entity;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.sql.Date;
+import java.sql.Time;
 import java.time.Instant;
 
 @Entity
@@ -24,8 +27,9 @@ public class UserEntity {
     @Email
     @NotEmpty(message = "Email is required")
     private String email;
-    @NotEmpty @Min(5) @Max(15)
+    @NotEmpty
     private String password;
-    private Instant user_createdat;
+    @CreationTimestamp
+    private Date user_createdat;
 
 }

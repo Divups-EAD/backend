@@ -26,14 +26,12 @@ public class SpecialBusServiceImpl implements SpecialBusService{
         List<SpecialBusEntity> specialBusEntities = specialBusRepository.findAll();
         List<SpecialBus> specialBuses = specialBusEntities.stream().map(sbus-> new SpecialBus(sbus.getSpecial_hiring_id(),
                 sbus.getNo_of_seats(),
-                sbus.getPayment_rate(),
                 sbus.getFacillities(),
                 sbus.getContact_no(),
                 sbus.getFacebook_link(),
                 sbus.getInsta_link(),
                 sbus.getBus_name(),
-                sbus.getSpecialbus_type(),
-                sbus.getSpecialbus_added()
+                sbus.getSpecialbus_type()
                 )).collect(Collectors.toList());
 
         return specialBuses;
@@ -71,7 +69,6 @@ public class SpecialBusServiceImpl implements SpecialBusService{
         SpecialBusEntity specialBusEntity = specialBusRepository.findById(id).get();
 
         specialBusEntity.setNo_of_seats(specialBus.getNo_of_seats());
-        specialBusEntity.setPayment_rate(specialBus.getPayment_rate());
         specialBusEntity.setFacillities(specialBus.getFacillities());
         specialBusEntity.setContact_no(specialBus.getContact_no());
         specialBusEntity.setFacebook_link(specialBus.getFacebook_link());

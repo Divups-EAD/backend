@@ -31,7 +31,9 @@ public class BusServiceImpl implements BusService {
                 bus1.getStatus(),
                 bus1.getNo_of_seats(),
                 bus1.getRate(),
-                bus1.getAdded_on()
+                bus1.getDepartureTime(),
+                bus1.getAdded_on(),
+                bus1.getBus_owner_id()
                 )).collect(Collectors.toList());
 
         return buses;

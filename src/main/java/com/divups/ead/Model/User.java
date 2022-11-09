@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
+import java.sql.Time;
 import java.time.Instant;
 
 @Data
@@ -19,6 +20,6 @@ public class User {
     private String user_role;
     private String email;
     private String password;
-    private Instant user_createdat;
+    private Date user_createdat;
 
 }

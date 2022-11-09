@@ -14,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/specialbus")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000/")
 public class SpecialBusController {
 
     private final SpecialBusService specialBusService;

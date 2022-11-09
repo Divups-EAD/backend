@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/busowner")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000/")
 public class BusOwnerController {
 
     private BusOwnerService busOwnerService;

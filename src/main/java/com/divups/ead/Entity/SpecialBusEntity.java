@@ -21,14 +21,12 @@ public class SpecialBusEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer special_hiring_id;
     private Integer no_of_seats;
-    private Double payment_rate;
     private String facillities;
     private String contact_no;
     private String facebook_link;
     private String insta_link;
     private String bus_name;
     private String specialbus_type;
-    private Date specialbus_added;
 //    @ManyToOne(fetch = LAZY)
 //    @JoinColumn(name="busowner_id",referencedColumnName ="bus_owner_id")
 //    private BusOwnerEntity busOwner;

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
+import java.sql.Time;
 
 @Data
 @NoArgsConstructor
@@ -18,6 +19,9 @@ public class Bus {
     private Boolean status;
     private Integer no_of_seats;
     private Double rate;
+    private Time departureTime;
     private Date added_on;
+    private Integer bus_owner_id;
+
 //    private BusOwner busOwner;
 }

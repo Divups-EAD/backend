@@ -16,11 +16,9 @@ import java.time.Instant;
 
 public class Booking {
     private Integer idbooking;
-    private Integer seat_no;
+    private String seat_no;
     private Date booking_date;
-    private Time booking_time;
-    private Boolean payment_status;
-    private Instant booking_at;
-    private BusEntity bus;
-    private UserEntity user;
+    private Integer busid;
+    private Integer customer_id;
+
 }
